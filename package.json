@@ -1,0 +1,21 @@
+{
+  "name": "ye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "bash deploy.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-sakura": "^1.2.1",
+    "vuepress-theme-reco": "^1.6.17"
+  }
+}
