@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>为什么 JSX 语法这么香？ | 小飞猪的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="我以为忘了想念">
+    
+    <link rel="preload" href="/YE/assets/css/0.styles.dae2f673.css" as="style"><link rel="preload" href="/YE/assets/js/app.39702b9b.js" as="script"><link rel="preload" href="/YE/assets/js/3.f3cac457.js" as="script"><link rel="preload" href="/YE/assets/js/1.4ce8eb60.js" as="script"><link rel="preload" href="/YE/assets/js/13.b7e07272.js" as="script"><link rel="prefetch" href="/YE/assets/js/10.a1c5bf1a.js"><link rel="prefetch" href="/YE/assets/js/11.8da9b6de.js"><link rel="prefetch" href="/YE/assets/js/12.c13592b9.js"><link rel="prefetch" href="/YE/assets/js/4.3c9f08bb.js"><link rel="prefetch" href="/YE/assets/js/5.84855240.js"><link rel="prefetch" href="/YE/assets/js/6.731cf391.js"><link rel="prefetch" href="/YE/assets/js/7.5f3b09d9.js"><link rel="prefetch" href="/YE/assets/js/8.56e1fadf.js"><link rel="prefetch" href="/YE/assets/js/9.7f292a0b.js">
+    <link rel="stylesheet" href="/YE/assets/css/0.styles.dae2f673.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>小飞猪的博客</h3> <p class="description" data-v-59e6cb88>我以为忘了想念</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ye</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/YE/" class="home-link router-link-active"><img src="/YE/tu1.gif" alt="小飞猪的博客" class="logo"> <span class="site-name">小飞猪的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/YE/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YE/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/JSX/" class="nav-link"><i class="undefined"></i>
+  JSX
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小飞猪的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/Xusssyyy" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/YE/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/YE/tu1.gif" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    ye
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>3</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>4</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/YE/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YE/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/JSX/" class="nav-link"><i class="undefined"></i>
+  JSX
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小飞猪的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/Xusssyyy" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/YE/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>为什么 JSX 语法这么香？</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ye</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">为什么 JSX 语法这么香？</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>ye</span></i> <!----> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>JSX 语法</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>时下虽然接入 JSX 语法的框架（React、Vue）越来越多，但与之缘分最深的毫无疑问仍然是 React。2013 年，当 React 带着 JSX 横空出世时，社区曾对 JSX 有过不少的争议，但如今，越来越多的人面对 JSX 都要说上一句“真香”！典型的“真香”系列。</p> <h2 id="jsx-是什么"><a href="#jsx-是什么" class="header-anchor">#</a> JSX 是什么？</h2> <p>按照 React 官方的解释，JSX 是一个 JavaScript 的语法扩展，类似于模板语法，或者说是一个类似于 XML 的 ECMAScript 语法扩展，并且具备 JavaScript 的全部功能。
+这段解释可抽离两个关键点：</p> <ul><li>「JavaScript 语法扩展」</li> <li>「具备JavaScript 的全部功能」</li></ul> <p>JSX 的定位是 JavaScript 的「语法扩展」，而不是“某个版本”，这就决定了浏览器并不会像天然支持 JavaScript 一样支持 JSX 。这就引出了一个问题 “JSX 是如何在 JavaScript 中生效的？”</p> <h2 id="jsx-语法是如何在-javascript-中生效的"><a href="#jsx-语法是如何在-javascript-中生效的" class="header-anchor">#</a> JSX 语法是如何在 JavaScript 中生效的？</h2> <h1 id="react"><a href="#react" class="header-anchor">#</a> React</h1> <p>在 React 框架中，JSX 的语法是如何在 JavaScript 中生效的呢？React 官网给出的解释是，JSX 会被编译为 React.createElement()，React.createElement() 将返回一个叫作“React Element”的 JS 对象。</p> <p>对于 JSX 的编译是由 Babel 来完成的。</p> <p>Babel 是一个工具链，主要用于将采用 ECMAScript 2015+ 语法编写的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中。</p> <p>当然 Babel 也具备将 JSX 转换为 JS 的能力，看一个例子：左边是我们 React 开发中写到的语法，并且包含了一段 JSX 代码。经过 Babel 转换之后，就全部变成了 JS 代码。</p> <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/58bdc0ee0b0e4c22987cfdcbfbbed294~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>其实如果仔细看，发现 JSX 更像是一种语法糖，通过类似模板语法的描述方式，描述函数对象。其实在 React 中并不会强制使用 JSX 语法，我们也可以使用 React.createElement 函数，例如使用 React.createElement 函数写这样一段代码。</p> <div class="language- extra-class"><pre class="language-text"><code>class Test extends React.Component {
+  render() {
+    return React.createElement(
+      &quot;div&quot;,
+      null,
+      React.createElement(
+        &quot;div&quot;,
+        null,
+        &quot;Hello, &quot;,
+        this.props.test
+      ),
+      React.createElement(&quot;div&quot;, null, &quot;Today is a fine day.&quot;)
+    );
+  }
+}
+
+ReactDOM.render(
+  React.createElement(Test, {
+    test: &quot;baixiaobai&quot;
+  }),
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre></div><p>在采用 JSX 之后，这段代码会这样写：</p> <div class="language- extra-class"><pre class="language-text"><code>class Test extends React.Component {
+  render() {
+    return (
+    	&lt;div&gt;
+            &lt;div&gt;Hello, {this.props.test}&lt;/div&gt; 
+            &lt;div&gt;Today is a fine day.&lt;/div&gt;
+    	&lt;/div&gt;
+    );
+  }
+}
+ReactDOM.render(
+  &lt;Test test=&quot;baixiaobai&quot; /&gt;,
+  document.getElementById('root')
+);
+</code></pre></div><p>通过对比发现，在实际功能效果一致的前提下，JSX 代码层次分明、嵌套关系清晰；而 React.createElement 代码则给人一种非常混乱的“杂糅感”，这样的代码不仅读起来不友好，写起来也费劲。</p> <p>JSX 语法写出来的代码更为的简洁，而且代码结构层次更加的清晰。</p> <p>JSX 语法糖允许我们开发人员像写 HTML 一样来写我们的 JS 代码。在降低学习成本的同时还提升了我们的研发效率和研发体验。</p> <h1 id="vue"><a href="#vue" class="header-anchor">#</a> Vue</h1> <p>当然在 Vue 框架中也不例外的可以使用 JSX 语法，虽然 Vue 默认推荐的还是模板。</p> <p>为什么默认推荐的模板语法，引用一段 Vue 官网的原话如下：</p> <p>任何合乎规范的 HTML 都是合法的 Vue 模板，这也带来了一些特有的优势：</p> <ul><li>对于很多习惯了 HTML 的开发者来说，模板比起 JSX 读写起来更自然。这里当然有主观偏好的成分，但如果这种区别会导致开发效率的提升，那么它就有客观的价值存在。</li> <li>基于 HTML 的模板使得将已有的应用逐步迁移到 Vue 更为容易。</li> <li>这也使得设计师和新人开发者更容易理解和参与到项目中。</li> <li>你甚至可以使用其他模板预处理器，比如 Pug 来书写 Vue 的模板。</li></ul> <p>有些开发者认为模板意味着需要学习额外的 DSL (Domain-Specific Language 领域特定语言) 才能进行开发——我们认为这种区别是比较肤浅的。首先，JSX 并不是没有学习成本的——它是基于 JS 之上的一套额外语法。同时，正如同熟悉 JS 的人学习 JSX 会很容易一样，熟悉 HTML 的人学习 Vue 的模板语法也是很容易的。最后，DSL 的存在使得我们可以让开发者用更少的代码做更多的事，比如 v-on 的各种修饰符，在 JSX 中实现对应的功能会需要多得多的代码。</p> <p>更抽象一点来看，我们可以把组件区分为两类：一类是偏视图表现的 (presentational)，一类则是偏逻辑的 (logical)。我们推荐在前者中使用模板，在后者中使用 JSX 或渲染函数。这两类组件的比例会根据应用类型的不同有所变化，但整体来说我们发现表现类的组件远远多于逻辑类组件。</p> <p>例如有这样一段模板语法。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;anchored-heading :level=&quot;1&quot;&gt;
+  &lt;span&gt;Hello&lt;/span&gt; world!
+&lt;/anchored-heading&gt;
+</code></pre></div><p>使用 JSX 语法会写成这样。</p> <div class="language- extra-class"><pre class="language-text"><code>render: function (h) {
+  return (
+    &lt;AnchoredHeading level={1}&gt;
+      &lt;span&gt;Hello&lt;/span&gt; world!
+    &lt;/AnchoredHeading&gt;
+  )
+}
+</code></pre></div><p>转换为 createElement 转换的 JS 就变成了这样。</p> <div class="language- extra-class"><pre class="language-text"><code>createElement(
+  'anchored-heading', {
+    props: {
+      level: 1
+    }
+  }, [
+    createElement('span', 'Hello'),
+    ' world!'
+  ]
+);
+</code></pre></div><p>但是不管是模板语法还是 JSX 语法，都不会得到浏览器纯天然的支持，这些语法最后都会被编译成相应的 h 函数（createElement函数，不泛指所有版本，在不同版本有差异）最后变成 JS 对象，这里的编译也是和 React 一样使用的 Babel 插件来完成的。</p> <p>不管是 React 推崇的 JSX 语法，还是 Vue 默认的模板语法，目的都是为了让我们写出来的代码更为的简洁，而且代码接口层次更加的清晰。在降低学习成本的同时还提升了我们的研发效率和研发体验。</p> <p>读到这里，相信你已经充分理解了“JSX 是 JavaScript 的一种语法扩展，它和模板语言很接近，并且具备 JavaScript 的全部功能。 ”这一定义背后的深意。</p> <p>不管是 React 还是 Vue 我们都提到了一个函数 createElement，这个函数就是将我们的 JSX 映射为 DOM的。</p> <h2 id="jsx-是如何映射为-dom-的-起底-createelement-源码"><a href="#jsx-是如何映射为-dom-的-起底-createelement-源码" class="header-anchor">#</a> JSX 是如何映射为 DOM 的：起底 createElement 源码</h2> <p>对于 creatElement 源码的分析，我们也分 React 和 Vue 来为大家解读。</p> <p>源码分析的具体版本没有必要去过于详细的讨论，因为不管是 React 还是 Vue 对于在实现 createElement 上在不同版本差别不大。</p> <h1 id="react-2"><a href="#react-2" class="header-anchor">#</a> React</h1> <div class="language- extra-class"><pre class="language-text"><code>export function createElement(type, config, children) {
+  // propName 变量用于储存后面需要用到的元素属性
+  let propName; 
+  // props 变量用于储存元素属性的键值对集合
+  const props = {}; 
+  // key、ref、self、source 均为 React 元素的属性，此处不必深究
+  let key = null;
+  let ref = null; 
+  let self = null; 
+  let source = null; 
+  // config 对象中存储的是元素的属性
+  if (config != null) { 
+    // 进来之后做的第一件事，是依次对 ref、key、self 和 source 属性赋值
+    if (hasValidRef(config)) {
+      ref = config.ref;
+    }
+    // 此处将 key 值字符串化
+    if (hasValidKey(config)) {
+      key = '' + config.key; 
+    }
+    self = config.__self === undefined ? null : config.__self;
+    source = config.__source === undefined ? null : config.__source;
+    // 接着就是要把 config 里面的属性都一个一个挪到 props 这个之前声明好的对象里面
+    for (propName in config) {
+      if (
+        // 筛选出可以提进 props 对象里的属性
+        hasOwnProperty.call(config, propName) &amp;&amp; !RESERVED_PROPS.hasOwnProperty(propName) 
+      ) {
+        props[propName] = config[propName]; 
+      }
+    }
+  }
+  // childrenLength 指的是当前元素的子元素的个数，减去的 2 是 type 和 config 两个参数占用的长度
+  const childrenLength = arguments.length - 2; 
+  // 如果抛去type和config，就只剩下一个参数，一般意味着文本节点出现了
+  if (childrenLength === 1) { 
+    // 直接把这个参数的值赋给props.children
+    props.children = children; 
+    // 处理嵌套多个子元素的情况
+  } else if (childrenLength &gt; 1) { 
+    // 声明一个子元素数组
+    const childArray = Array(childrenLength); 
+    // 把子元素推进数组里
+    for (let i = 0; i &lt; childrenLength; i++) { 
+      childArray[i] = arguments[i + 2];
+    }
+    // 最后把这个数组赋值给props.children
+    props.children = childArray; 
+  } 
+
+  // 处理 defaultProps
+  if (type &amp;&amp; type.defaultProps) {
+    const defaultProps = type.defaultProps;
+    for (propName in defaultProps) { 
+      if (props[propName] === undefined) {
+        props[propName] = defaultProps[propName];
+      }
+    }
+  }
+  // 最后返回一个调用ReactElement执行方法，并传入刚才处理过的参数
+  return ReactElement(
+    type,
+    key,
+    ref,
+    self,
+    source,
+    ReactCurrentOwner.current,
+    props,
+  );
+}
+</code></pre></div><p>createElement 函数有 3 个入参，这 3 个入参包含了我们在创建一个 React 元素的全部信息。</p> <ul><li>type：用于标识节点的类型。可以是原生态的 div 、span 这样的 HTML 标签，也可以是 React 组件，还可以是 React fragment（空元素）。</li> <li>config：一个对象，组件所有的属性（不包含默认的一些属性）都会以键值对的形式存储在 config 对象中。</li> <li>children：泛指第二个参数后的所有参数，它记录的是组件标签之间嵌套的内容，也就是所谓的“子节点”“子元素”。</li></ul> <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/922f0075a2934df28172feb46402aea6~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>从源码角度来看，createElement 函数就是将开发时研发人员写的数据、属性、参数做一层格式化，转化为 React 好理解的参数，然后交付给 ReactElement 来实现元素创建。</p> <p>接下来我们来看看 ReactElement 函数</p> <div class="language- extra-class"><pre class="language-text"><code>const ReactElement = function(type, key, ref, self, source, owner, props) {
+  const element = {
+    // 标记这是个 React Element
+    $$typeof: REACT_ELEMENT_TYPE,
+
+    type: type,
+    key: key,
+    ref: ref,
+    props: props,
+    _owner: owner,
+  };
+
+  return element;
+};
+</code></pre></div><p>源码异常的简单，也就是对 createElement 函数转换的参数，在进行一次处理，包装进 element 对象中返给开发者。如果你试过将这个返回 ReactElement 进行输出，你会发现有没有很熟悉的感觉，没错，这就是我们老生常谈的「虚拟 DOM」，JavaScript 对象对 DOM 的描述。</p> <p>最后通过 ReactDOM.render 方法将虚拟DOM 渲染到指定的容器里面。</p> <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a81aebf337584be48dd6020b1be5f093~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <h1 id="vue2"><a href="#vue2" class="header-anchor">#</a> Vue2</h1> <p>我们在来看看 Vue 是如何映射 DOM 的。</p> <div class="language- extra-class"><pre class="language-text"><code>export function createElement (
+  context: Component,
+  tag: any,
+  data: any,
+  children: any,
+  normalizationType: any,
+  alwaysNormalize: boolean
+): VNode | Array&lt;VNode&gt; {
+  ...
+  return _createElement(context, tag, data, children, normalizationType)
+}
+</code></pre></div><p>createElement 函数就是对 _createElement 函数的一个封装，它允许传入的参数更加灵活，在处理这些参数后，调用真正创建 VNode 的函数 _createElement：</p> <div class="language- extra-class"><pre class="language-text"><code>export function _createElement (
+  context: Component,
+  tag?: string | Class&lt;Component&gt; | Function | Object,
+  data?: VNodeData,
+  children?: any,
+  normalizationType?: number
+): VNode | Array&lt;VNode&gt; {
+  ...
+  return vnode;
+}
+</code></pre></div><p>_createElement 方法有 5 个参数:</p> <ul><li>context 表示 VNode 的上下文环境。</li> <li>tag 表示标签，它可以是一个字符串，也可以是一个 Component。</li> <li>data 表示 VNode 的数据。</li> <li>children 表示当前 VNode 的子节点，它是任意类型的，它接下来需要被规范为标准的 VNode 数组。</li> <li>normalizationType 表示子节点规范的类型，类型不同规范的方法也就不一样，它主要是参考 render 函数是编译生成的还是用户手写的。</li></ul> <p>_createElement 实现内容略多，这里就不详细分析了，反正最后都会创建一个 VNode ，每个 VNode 有 children，children 每个元素也是一个 VNode，这样就形成了一个 VNode Tree，它很好的描述了我们的 DOM Tree。</p> <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13df5b4594e444b4a41149f795f1ff10~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>当 VNode 创建好之后，就下来就是把 VNode 渲染成一个真实的 DOM 并渲染出来。这个过程是通过 vm._update 完成的。Vue 的 _update 是实例的一个私有方法，它被调用的时机有 2 个，一个是首次渲染，一个是数据更新的时候，我们这里只看首次渲染；当调用 _update 时，核心就是调用 vm.patch 方法。</p> <ul><li>patch：这个方法实际上在不同的平台，比如 web 和 weex 上的定义是不一样的</li></ul> <p>引入一段代码来看看具体实现。</p> <div class="language- extra-class"><pre class="language-text"><code>var app = new Vue({
+ el: '#app',
+ render: function (createElement) {
+   return createElement('div', {
+     attrs: {
+       id: 'app'
+     },
+   }, this.message)
+ },
+ data: {
+   message: 'Hello Vue!'
+ }
+});
+</code></pre></div><p>在 vm._update 的方法里是这么调用 patch 方法的：</p> <div class="language- extra-class"><pre class="language-text"><code>if (!prevVnode) {
+  // 首次渲染
+  vm.$el = vm.__patch__(vm.$el, vnode, hydrating, false /* removeOnly */);
+} else {
+  // 更新
+  vm.$el = vm.__patch__(prevVnode, vnode);
+}
+</code></pre></div><p>首次渲染:</p> <ul><li>$el 对应的就是 id 为 app 的 DOM 元素。</li> <li>vnode 对应的是 render 函数通过 createElement 函数创建的 虚拟 DOM。</li> <li>hydrating 在非服务端渲染情况下为 false。</li></ul> <p>确认首次渲染的参数之后，我们再来看看 patch 的执行过程。一段又臭又长的源码。</p> <div class="language- extra-class"><pre class="language-text"><code>function patch (oldVnode, vnode, hydrating, removeOnly) {
+      if (isUndef(vnode)) {
+        if (isDef(oldVnode)) { invokeDestroyHook(oldVnode); }
+        return
+      }
+
+      var isInitialPatch = false;
+      var insertedVnodeQueue = [];
+
+      if (isUndef(oldVnode)) {
+        // empty mount (likely as component), create new root element
+        isInitialPatch = true;
+        createElm(vnode, insertedVnodeQueue);
+      } else {
+        var isRealElement = isDef(oldVnode.nodeType);
+        if (!isRealElement &amp;&amp; sameVnode(oldVnode, vnode)) {
+          // patch existing root node
+          patchVnode(oldVnode, vnode, insertedVnodeQueue, null, null, removeOnly);
+        } else {
+          if (isRealElement) {
+            // mounting to a real element
+            // check if this is server-rendered content and if we can perform
+            // a successful hydration.
+            if (oldVnode.nodeType === 1 &amp;&amp; oldVnode.hasAttribute(SSR_ATTR)) {
+              oldVnode.removeAttribute(SSR_ATTR);
+              hydrating = true;
+            }
+            if (isTrue(hydrating)) {
+              if (hydrate(oldVnode, vnode, insertedVnodeQueue)) {
+                invokeInsertHook(vnode, insertedVnodeQueue, true);
+                return oldVnode
+              } else {
+                warn(
+                  'The client-side rendered virtual DOM tree is not matching ' +
+                  'server-rendered content. This is likely caused by incorrect ' +
+                  'HTML markup, for example nesting block-level elements inside ' +
+                  '&lt;p&gt;, or missing &lt;tbody&gt;. Bailing hydration and performing ' +
+                  'full client-side render.'
+                );
+              }
+            }
+            // either not server-rendered, or hydration failed.
+            // create an empty node and replace it
+            oldVnode = emptyNodeAt(oldVnode);
+          }
+
+          // replacing existing element
+          var oldElm = oldVnode.elm;
+          var parentElm = nodeOps.parentNode(oldElm);
+
+          // create new node
+          createElm(
+            vnode,
+            insertedVnodeQueue,
+            // extremely rare edge case: do not insert if old element is in a
+            // leaving transition. Only happens when combining transition +
+            // keep-alive + HOCs. (#4590)
+            oldElm._leaveCb ? null : parentElm,
+            nodeOps.nextSibling(oldElm)
+          );
+
+          // update parent placeholder node element, recursively
+          if (isDef(vnode.parent)) {
+            var ancestor = vnode.parent;
+            var patchable = isPatchable(vnode);
+            while (ancestor) {
+              for (var i = 0; i &lt; cbs.destroy.length; ++i) {
+                cbs.destroy[i](ancestor);
+              }
+              ancestor.elm = vnode.elm;
+              if (patchable) {
+                for (var i$1 = 0; i$1 &lt; cbs.create.length; ++i$1) {
+                  cbs.create[i$1](emptyNode, ancestor);
+                }
+                // #6513
+                // invoke insert hooks that may have been merged by create hooks.
+                // e.g. for directives that uses the &quot;inserted&quot; hook.
+                var insert = ancestor.data.hook.insert;
+                if (insert.merged) {
+                  // start at index 1 to avoid re-invoking component mounted hook
+                  for (var i$2 = 1; i$2 &lt; insert.fns.length; i$2++) {
+                    insert.fns[i$2]();
+                  }
+                }
+              } else {
+                registerRef(ancestor);
+              }
+              ancestor = ancestor.parent;
+            }
+          }
+
+          // destroy old node
+          if (isDef(parentElm)) {
+            removeVnodes([oldVnode], 0, 0);
+          } else if (isDef(oldVnode.tag)) {
+            invokeDestroyHook(oldVnode);
+          }
+        }
+      }
+
+      invokeInsertHook(vnode, insertedVnodeQueue, isInitialPatch);
+      return vnode.elm
+    }
+</code></pre></div><p>在首次渲染时，由于我们传入的 oldVnode（ id 为 app 的 DOM 元素 ） 实际上是一个 DOM container，接下来又通过 emptyNodeAt 方法把 oldVnode 转换成 VNode 对象，然后再调用 createElm 方法，通过虚拟节点创建真实的 DOM 并插入到它的父节点中。</p> <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b0908d62260c4b6c9f02c0369bf66ddb~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>通过起底 React 和 Vue 的 createElement 源码，分析了 JSX 是如何映射为真实 DOM 的，实现思路的整体方向都是一样的。所以说优秀的框架大家都在相互借鉴，相互学习。</p> <h2 id="为什么-react-一开始就选择-jsx"><a href="#为什么-react-一开始就选择-jsx" class="header-anchor">#</a> 为什么 React 一开始就选择 JSX?</h2> <p>在 2013 年，React 带着 JSX 语法出现，刚出现时饱受争议，为什么 React 会选择 JSX？而不是其他的语法。比如：</p> <h1 id="模板"><a href="#模板" class="header-anchor">#</a> 模板</h1> <p>模板语法比较典型的是 AngularJS，如果你用过 AngularJS，你会发现对于模板会引入很多的概念，比如新的模板语法、新的模板指令。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div ng-controller=&quot;Ctrl1&quot;&gt;
+      Hello &lt;input ng-model='name'&gt; &lt;hr/&gt;
+      &lt;span ng-bind=&quot;name&quot;&gt;&lt;/span&gt; &lt;br/&gt;
+      &lt;span ng:bind=&quot;name&quot;&gt;&lt;/span&gt; &lt;br/&gt;
+      &lt;span ng_bind=&quot;name&quot;&gt;&lt;/span&gt; &lt;br/&gt;
+      &lt;span data-ng-bind=&quot;name&quot;&gt;&lt;/span&gt; &lt;br/&gt;
+      &lt;span x-ng-bind=&quot;name&quot;&gt;&lt;/span&gt; &lt;br/&gt;
+&lt;/div&gt;
+
+angular.module('test', [])
+  .controller('Ctrl1', function Ctrl1($scope) {
+    $scope.name = '1';
+});
+</code></pre></div><p>React 的设计初衷是**「关注点分离」，React 本身的关注基本单位是组件，在组件内部高内聚，组件之间低耦合。而模板语法做不到。并且 JSX 并不会引入太多的新的概念。** 也可以看出 React 代码更简洁，更具有可读性，更贴近 HTML。</p> <div class="language- extra-class"><pre class="language-text"><code>const App = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      xxx
+    &lt;/div&gt;
+  )
+}
+</code></pre></div><h1 id="模板字符串"><a href="#模板字符串" class="header-anchor">#</a> 模板字符串</h1> <p>JSX 的语法浅看有一点像模板字符串，如果在早几年，使用过 PHP + JQuery 技术栈的同学可能写过类似这样语法的代码。</p> <div class="language- extra-class"><pre class="language-text"><code>var box = jsx`
+  &lt;${Box}&gt;
+    ${
+      true ?
+      jsx`&lt;${Box.Comment}&gt;
+         Text Content
+        &lt;/${Box.Comment}&gt;` :
+      jsx`
+        &lt;${Box.Comment}&gt;
+         Text Content
+        &lt;/${Box.Comment}&gt;
+      `
+    }
+  &lt;/${Box}&gt;
+`;
+</code></pre></div><p>不知你怎么看，反正我当时在写这样代码的时候是很痛苦的，并且代码结果变得更加复杂，不利于后期的维护。</p> <h1 id="jxon"><a href="#jxon" class="header-anchor">#</a> JXON</h1> <div class="language- extra-class"><pre class="language-text"><code>&lt;catalog&gt;
+  &lt;product description=&quot;Cardigan Sweater&quot;&gt;
+    1111
+  &lt;/product&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;&lt;![CDATA[function matchwo(a,b) {
+    if (a &lt; b &amp;&amp; a &lt; 0) { return 1; }
+    else { return 0; }
+  }]]&gt;
+  &lt;/script&gt;
+&lt;/catalog&gt;
+</code></pre></div><p>但最终放弃 JXON 这一方案的原因是，大括号不能为元素在树中开始和结束的位置，提供很好的语法提示。</p> <h1 id="template"><a href="#template" class="header-anchor">#</a> template</h1> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;1&lt;/div&gt;
+&lt;template&gt;
+&lt;script&gt;
+  ....
+&lt;script&gt;
+</code></pre></div><p>那为什么不能和 Vue 一样使用 模板语法了？ JSX 本质就是 JavaScript，想实现条件渲染可以用 if else，也可以用三元表达式，还可以用任意合法的 JavaScript 语法。也就是说，JSX 可以支持更动态的需求。而 template 则因为语法限制原因，不能够像 JSX 那样可以支持更动态的需求。这是 JSX 相比于 template 的一个优势。 JSX 相比于 template 还有一个优势，是可以在一个文件内返回多个组件。</p> <p>但是就 Vue 来说，默认选择 template 语法也是有原因的，template 由于语法固定，可以在编译层面做的优化较多，比如静态标记就真正做到了按需更新；而 JSX 由于动态性太强，只能在有限的场景下做优化，虽然性能不如 template 好，但在某些动态性要求较高的场景下，JSX 成了标配，这也是诸多组件库会使用 JSX 的主要原因。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>通过对比多种方案，发现 JSX 本身具备他独享的优势，JSX 语法写出来的代码更为的简洁，而且代码结构层次更加的清晰。JSX 语法糖允许我们开发人员像写 HTML 一样来写我们的 JS 代码。在降低学习成本的同时还提升了我们的研发效率和研发体验。
+并且JSX 本身没有太多的语法，也不期待引入更多的标准。实际上，在 16 年的时候，JSX 公布过 2.0 的建设计划与小部分新特性，但很快被 Facebook 放弃掉了。整个计划在公布不到两个月的时间里便停掉了。其中一个原因是 JSX 的设计初衷，即并不希望引入太多的标准，也不期望 JSX 加入浏览器或者 ECMAScript 标准。</p> <h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <ul><li><a href="https://legacy.reactjs.org/docs/glossary.html#jsx">JSX</a></li> <li><a href="https://www.babeljs.cn/docs/">Babel</a></li> <li><a href="https://blog.csdn.net/qq_39200185/article/details/119735268?ydreferer=aHR0cHM6Ly9saW5rLmp1ZWppbi5jbi8%3D">React</a></li> <li><a href="https://github.com/vuejs/babel-plugin-transform-vue-jsx">Vuejs</a></li> <li><a href="https://time.geekbang.org/column/article/444283">JSX</a></li> <li><a href="https://ustbhuangyi.github.io/vue-analysis/v2/data-driven/create-element.html#children-%E7%9A%84%E8%A7%84%E8%8C%83%E5%8C%96">children 的规范化</a></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="Sakura" data-v-248d85d6><canvas id="canvas_sakura" style="z-index:-1;" data-v-248d85d6></canvas></div><canvas id="vuepress-canvas-cursor"></canvas></div></div>
+    <script src="/YE/assets/js/app.39702b9b.js" defer></script><script src="/YE/assets/js/3.f3cac457.js" defer></script><script src="/YE/assets/js/1.4ce8eb60.js" defer></script><script src="/YE/assets/js/13.b7e07272.js" defer></script>
+  </body>
+</html>

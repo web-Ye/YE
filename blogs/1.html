@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何实现CSS中flex布局最后一行左对齐？ | 小飞猪的博客</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="我以为忘了想念">
+    
+    <link rel="preload" href="/YE/assets/css/0.styles.dae2f673.css" as="style"><link rel="preload" href="/YE/assets/js/app.39702b9b.js" as="script"><link rel="preload" href="/YE/assets/js/3.f3cac457.js" as="script"><link rel="preload" href="/YE/assets/js/1.4ce8eb60.js" as="script"><link rel="preload" href="/YE/assets/js/11.8da9b6de.js" as="script"><link rel="prefetch" href="/YE/assets/js/10.a1c5bf1a.js"><link rel="prefetch" href="/YE/assets/js/12.c13592b9.js"><link rel="prefetch" href="/YE/assets/js/13.b7e07272.js"><link rel="prefetch" href="/YE/assets/js/4.3c9f08bb.js"><link rel="prefetch" href="/YE/assets/js/5.84855240.js"><link rel="prefetch" href="/YE/assets/js/6.731cf391.js"><link rel="prefetch" href="/YE/assets/js/7.5f3b09d9.js"><link rel="prefetch" href="/YE/assets/js/8.56e1fadf.js"><link rel="prefetch" href="/YE/assets/js/9.7f292a0b.js">
+    <link rel="stylesheet" href="/YE/assets/css/0.styles.dae2f673.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>小飞猪的博客</h3> <p class="description" data-v-59e6cb88>我以为忘了想念</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ye</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/YE/" class="home-link router-link-active"><img src="/YE/tu1.gif" alt="小飞猪的博客" class="logo"> <span class="site-name">小飞猪的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/YE/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YE/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/JSX/" class="nav-link"><i class="undefined"></i>
+  JSX
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小飞猪的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/Xusssyyy" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/YE/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/YE/tu1.gif" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    ye
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>3</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>4</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/YE/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/YE/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/前端/" class="nav-link"><i class="undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/YE/categories/JSX/" class="nav-link"><i class="undefined"></i>
+  JSX
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      小飞猪的博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://github.com/Xusssyyy" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="/YE/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>如何实现CSS中flex布局最后一行左对齐？</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>ye</span>
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page" style="padding-right:0;"><section style="display:;"><div class="page-title"><h1 class="title">如何实现CSS中flex布局最后一行左对齐？</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>ye</span></i> <!----> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>flex布局</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>flex布局目前已经非常流行了，它基本上可以完成大部分的布局需求。早一些的float布局、表格布局等等便没有那么受欢迎了。但是任何事物都不是完美的，flex布局也一样，它也有瑕疵，就比如我们今天所要讲的flex布局中最后一行对齐问题。</p> <h1 id="_1-为什么要最后一行左对齐"><a href="#_1-为什么要最后一行左对齐" class="header-anchor">#</a> 1.为什么要最后一行左对齐</h1> <p>我们都知道flex布局就是一个二维坐标系，有横轴和纵轴，里面的子元素则根据我们最初定义的横轴和纵轴初始方向进行排列，如下图：</p> <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ce2ce2398eb44eca3eb8df9a1910c82~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>在flex布局中，justify-content属性非常常用，它用来规定横轴元素的排列规则，通常使用的有以下几种：</p> <ul><li>两端对齐：justify-content: space-between;</li> <li>左对齐：justify-content: flex-start;</li> <li>右对齐：justify-content: flex-end;</li> <li>居中对齐：justify-content: center;</li></ul> <p>当我们使用两端对齐时，最后一行元素就会出现问题，导致整体样式不够美观，如下图一样：
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa0ad05b7c7f47a7b64c292b1b03f394~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"></p> <h2 id="代码如下"><a href="#代码如下" class="header-anchor">#</a> 代码如下：</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+    <span class="token punctuation">.</span>container <span class="token punctuation">{</span>
+      <span class="token literal-property property">width</span><span class="token operator">:</span> 300px<span class="token punctuation">;</span>
+      <span class="token literal-property property">border</span><span class="token operator">:</span> 1px solid #<span class="token number">000</span><span class="token punctuation">;</span>
+      <span class="token literal-property property">display</span><span class="token operator">:</span> flex<span class="token punctuation">;</span>
+      flex<span class="token operator">-</span>wrap<span class="token operator">:</span> wrap<span class="token punctuation">;</span>
+      justify<span class="token operator">-</span>content<span class="token operator">:</span> space<span class="token operator">-</span>between<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token punctuation">.</span>list <span class="token punctuation">{</span>
+      <span class="token literal-property property">width</span><span class="token operator">:</span> 66px<span class="token punctuation">;</span>
+      <span class="token literal-property property">height</span><span class="token operator">:</span> 66px<span class="token punctuation">;</span>
+      margin<span class="token operator">-</span>bottom<span class="token operator">:</span> 10px<span class="token punctuation">;</span>
+      background<span class="token operator">-</span>color<span class="token operator">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">148</span><span class="token punctuation">,</span> <span class="token number">148</span><span class="token punctuation">,</span> <span class="token number">131</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;list&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  这个时候我们可能就需要让最后一行元素左对齐。
+</code></pre></div><h2 id="_2-每行列数固定"><a href="#_2-每行列数固定" class="header-anchor">#</a> 2.每行列数固定</h2> <p>如果每一行的元素固定，比如我们这里每一行的元素都是四个，这个时候我们有两种方式解决最后一行元素左对齐问题。</p> <h2 id="_2-1-模拟两端对齐"><a href="#_2-1-模拟两端对齐" class="header-anchor">#</a> 2.1 模拟两端对齐</h2> <p>这里模拟的意思代表我们不使用justify-content: space-between进行两端对齐，但是我们又要有两端对齐的效果，而且每一个子元素之间的间隙也要有。
+为了实现这种效果，我们需要动态计算每个 子元素之间的间隙，间隙我们利用margin来控制，代码如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">.</span>container <span class="token punctuation">{</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token literal-property property">border</span><span class="token operator">:</span> 1px solid #<span class="token number">000</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">display</span><span class="token operator">:</span> flex<span class="token punctuation">;</span>
+  flex<span class="token operator">-</span>wrap<span class="token operator">:</span> wrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>list <span class="token punctuation">{</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> 66px<span class="token punctuation">;</span>
+  <span class="token literal-property property">height</span><span class="token operator">:</span> 66px<span class="token punctuation">;</span>
+  margin<span class="token operator">-</span>bottom<span class="token operator">:</span> 10px<span class="token punctuation">;</span>
+  background<span class="token operator">-</span>color<span class="token operator">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">148</span><span class="token punctuation">,</span> <span class="token number">148</span><span class="token punctuation">,</span> <span class="token number">131</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 每一行的最后一个元素不设置右边距</span>
+<span class="token punctuation">.</span>list<span class="token operator">:</span><span class="token function">not</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">:</span>nth<span class="token operator">-</span><span class="token function">child</span><span class="token punctuation">(</span><span class="token number">4n</span><span class="token punctuation">)</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  margin<span class="token operator">-</span>right<span class="token operator">:</span> 22px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/93d8e7067432430b9bdf7db69493b91a~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>这种方式虽然也可以实现两端对齐的效果，但是需要计算每一个子元素的右边距。</p> <h2 id="_2-2-根据个数动态设置margin"><a href="#_2-2-根据个数动态设置margin" class="header-anchor">#</a> 2.2 根据个数动态设置margin</h2> <p>这里的动态设置margin指的是设置最后一个元素的margin值，假如我们这里每一行4个元素，但是最后一行只有三个元素，此时如果我们将最后一行的最后一个元素的右边距设置为元素宽度+间隙宽度，那么是可以实现左对齐效果的。
+但是这个时候我们需要知道最后一行有几个元素，这里会用到一个CSS选择器：</p> <p>.list:last-child:nth-child(4n - 1)说明最后一行，要么3个元素，要么7个元素……
+.list:last-child:nth-child(4n - 2)说明最后一行，要么2个元素，要么6个元素……</p> <p>上面的两行代码让我们取到了最后一行的第3个元素和第2个元素，然后动态设置margin，代码如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">.</span>container <span class="token punctuation">{</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token literal-property property">border</span><span class="token operator">:</span> 1px solid #<span class="token number">000</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">display</span><span class="token operator">:</span> flex<span class="token punctuation">;</span>
+  flex<span class="token operator">-</span>wrap<span class="token operator">:</span> wrap<span class="token punctuation">;</span>
+  justify<span class="token operator">-</span>content<span class="token operator">:</span> space<span class="token operator">-</span>between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>list <span class="token punctuation">{</span>
+  <span class="token literal-property property">width</span><span class="token operator">:</span> 65px<span class="token punctuation">;</span>
+  <span class="token literal-property property">height</span><span class="token operator">:</span> 65px<span class="token punctuation">;</span>
+  margin<span class="token operator">-</span>bottom<span class="token operator">:</span> 10px<span class="token punctuation">;</span>
+  background<span class="token operator">-</span>color<span class="token operator">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">148</span><span class="token punctuation">,</span> <span class="token number">148</span><span class="token punctuation">,</span> <span class="token number">131</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>list<span class="token operator">:</span>last<span class="token operator">-</span>child<span class="token operator">:</span>nth<span class="token operator">-</span><span class="token function">child</span><span class="token punctuation">(</span><span class="token parameter"><span class="token number">4n</span> <span class="token operator">-</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  margin<span class="token operator">-</span>right<span class="token operator">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>66px <span class="token operator">+</span> 12px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>list<span class="token operator">:</span>last<span class="token operator">-</span>child<span class="token operator">:</span>nth<span class="token operator">-</span><span class="token function">child</span><span class="token punctuation">(</span><span class="token parameter"><span class="token number">4n</span> <span class="token operator">-</span> <span class="token number">2</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  margin<span class="token operator">-</span>right<span class="token operator">:</span> <span class="token function">calc</span><span class="token punctuation">(</span>66px <span class="token operator">+</span> 66px <span class="token operator">+</span> 12px <span class="token operator">+</span> 12px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a0246fb5db6b4625aba8e56990624bfc~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>当最后一行有三个元素时，则最后一个元素的右边距=元素宽度+间隙宽度。</p> <h2 id="_3-每行子元素宽度不固定"><a href="#_3-每行子元素宽度不固定" class="header-anchor">#</a> 3.每行子元素宽度不固定</h2> <p>有时候我们每行的元素宽度不是固定的，这个时候我们有两外两种方法来实现最后一行左对齐。</p> <h2 id="_3-1-margin-right-auto"><a href="#_3-1-margin-right-auto" class="header-anchor">#</a> 3.1 margin-right:auto</h2> <p>这种方式实现起来很简单，我们只需要设置最后一个元素的margin-right为auto即可，代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>.container {
+  width: 300px;
+  border: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.list:nth-child(1) {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+.list:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+.list:nth-child(3n) {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.list:last-child {
+  margin-right: auto;
+}
+</code></pre></div><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1deb1658a4740fab3b2a4f54c24bc9b~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>为了方便大家理解，我给很多list元素设置了不同宽度，大家可以看到最后一行元素虽然左对齐了，但是最右边并没有实现完美的贴边对齐，所有这也是这种方式的一个小小的缺陷。</p> <h2 id="_3-2-设置伪元素"><a href="#_3-2-设置伪元素" class="header-anchor">#</a> 3.2 设置伪元素</h2> <p>除了利用margin-right:auto之外，我们还可以利用伪元素来实现最后一行左对齐，创建伪元素并设置flex:auto或者flex:1，代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>.container {
+  width: 300px;
+  border: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.list:nth-child(1) {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.list:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.list:nth-child(3n) {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.container::after {
+  content: '';
+  flex: auto;
+  /* 或者flex: 1 */
+}
+</code></pre></div><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/934c4f2a6af8461390dc867c7f225b02~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>这种效果和margin:auto是一致的。</p> <h2 id="_4-每行列数不固定"><a href="#_4-每行列数不固定" class="header-anchor">#</a> 4.每行列数不固定</h2> <p>有些时候我们每一行的个数是不定的，这个时候上面的方法就不太适用了，我们需要使用其它方法来实现最后一行左对齐：使用足够多的占位空白元素来进行占位，占位元素的个数由最多列数的个数决定。</p> <div class="language- extra-class"><pre class="language-text"><code>.container {
+  border: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 10px;
+  background-color: rgb(148, 148, 131);
+  margin-right: 10px;
+}
+
+.container&gt;i {
+  width: 65px;
+  margin-right: 10px;
+}
+
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;&lt;/div&gt;
+  &lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;
+&lt;/div&gt;
+</code></pre></div><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2130b030b5934ee1adbd73431a21a7ba~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" style="zoom:100%;"> <p>这里我们声明了很多占位i标签元素，并且给它设置了宽度，因为我们没有给它设置高度，所以不会影响我们的布局，这种方式也实现了最后一行左对齐，但是它改变了html结构。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>这里给出了4种实现flex布局最后一行左对齐的方法，但是每一种都还是有瑕疵的，运用最广泛的还是利用占位元素的方式，因为它不仅适用于每行元素不固定的场景，每行元素个数固定时它也可以使用。
+但是如果想要完美实现两端对齐，可以考虑grid布局方式。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:0;" data-v-b57cc07c data-v-7dd95ae2></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="Sakura" data-v-248d85d6><canvas id="canvas_sakura" style="z-index:-1;" data-v-248d85d6></canvas></div><canvas id="vuepress-canvas-cursor"></canvas></div></div>
+    <script src="/YE/assets/js/app.39702b9b.js" defer></script><script src="/YE/assets/js/3.f3cac457.js" defer></script><script src="/YE/assets/js/1.4ce8eb60.js" defer></script><script src="/YE/assets/js/11.8da9b6de.js" defer></script>
+  </body>
+</html>
